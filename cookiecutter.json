@@ -1,0 +1,14 @@
+{
+  "full_name": "Gabriel Falcao",
+  "email": "gabriel@nacaolivre.org",
+  "github_username": "gabrielfalcao",
+  "project_name": "Time to name your child",
+  "pypi_project_name": "{{ cookiecutter.github_username }}-package-name",
+  "travis_password": "replace this with ``travis-encrypt {{ cookiecutter.pypi_project_name }}``",
+  "app_name": "clever_named_project",
+  "copyright_year": "2018",
+  "license_name": "MIT",
+  "project_short_description": "A generic python module ready to be open sourced under {{ license_name }}",
+  "initial_version": "0.0.1",
+  "readthedocs_url": "https://{{cookiecutter.pypi_project_name}}.readthedocs.org"
+}

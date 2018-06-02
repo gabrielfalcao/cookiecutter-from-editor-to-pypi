@@ -1,0 +1,41 @@
+language: python
+sudo: false
+python:
+  - "2.7"
+  - "3.6"
+  - "3.7"
+  # - "3.3"
+  # - "3.4"
+  # - "3.5"
+  # - "pypy"
+  # - "pypy-5.3.1"
+
+
+matrix:
+    allow_failures:
+        - python: 2.7
+
+# services:
+#   - mysql
+
+# before_install:
+#   - mysql -e 'CREATE DATABASE {{ cookiecutter.module_name }};'
+
+# command to install dependencies
+install:
+  - python setup.py build sdist
+  - pip install -r development.txt
+
+# command to run tests
+script: nosetests tests/unit tests/functional
+
+# automated pypi releases
+deploy:
+  provider: pypi
+  user: {{cookiecutter.github_username}}
+  password:
+    secure: {{cookiecutter.travis_password}}
+  on:
+    branch: master
+    tags: true
+  distributions: sdist bdist_wheel
