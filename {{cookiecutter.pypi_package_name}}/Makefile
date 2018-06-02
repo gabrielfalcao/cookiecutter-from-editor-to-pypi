@@ -1,16 +1,28 @@
+# NOTE: the first target of a makefile executed when ``make`` is
+# executed without arguments.
+# It was deliberately named "default" here but could be any name.
+# Also feel free to modify it to execute a custom command.
+#
+#
+default: dependencies tests docs
+
+dependencies:
+	pip install -U pip --no-cache-dir
+	pip install -R development.txt
+
+develop:
+	python setup.py develop
+
 tests: unit functional
 
 unit:
-	nosetests tests/unit --rednose
+	nosetests tests/unit
 
 functional:
-	nosetests tests/functional --with-spec --spec-color
+	nosetests tests/functional
 
-html-docs:
+docs:
 	cd docs && make html
-
-docs: html-docs
-	open docs/build/html/index.html
 
 release:
 	@rm -rf dist/*
@@ -21,8 +33,11 @@ pypi:
 	@python setup.py build sdist
 	@twine upload dist/*.tar.gz
 
-.PHONY: docs
-
-
 clean:
-	@find . -name '*.pyc' -delete
+	@find . -type f -name '*.pyc' -exec rm -fv {} \;
+	@rm -rfv docs/build dist *egg-info*
+
+# tells "make" that the target "make docs" is phony, meaning that make
+# should ignore the existence of a file or folder named "docs" and
+# simply execute commands described in the target
+.PHONY: docs

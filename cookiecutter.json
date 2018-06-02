@@ -3,6 +3,7 @@
   "email": "gabriel@nacaolivre.org",
   "github_username": "gabrielfalcao",
   "project_name": "{{ cookiecutter.full_name }}'s HTTPBin Client",
+  "project_name_pascal_case": "{{ cookiecutter.full_name|capitalize }}HTTPBinClient",
   "pypi_project_name": "{{ cookiecutter.github_username }}-httpbin",
   "travis_password": "replace this with ``travis-encrypt {{ cookiecutter.pypi_project_name }}``",
   "module_name": "{{ cookiecutter.github_username }}_httpbin",

@@ -14,7 +14,6 @@
    :target: https://gitter.im/{{cookiecutter.github_username}}/{{cookiecutter.module_name}}?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 
-
 Install
 -------
 
@@ -39,3 +38,12 @@ Basic Usage
 
     this is an opportunity to get the attention of potential users of
     your package/tool/library
+
+
+Contributing
+------------
+
+#. Check the `code structure documentation <CODE_STRUCTURE.rst>`_
+#. Write tests
+#. Write code
+#. Send a pull-request
