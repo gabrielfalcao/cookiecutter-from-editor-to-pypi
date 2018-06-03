@@ -1,6 +1,8 @@
 {{cookiecutter.project_name}}
 {{"=" * cookiecutter.project_name|length}}
 
+``version 0.0.0``
+
 {{cookiecutter.project_short_description}}
 
 .. image:: https://readthedocs.org/projects/{{cookiecutter.module_name}}/badge/?version=latest
@@ -19,7 +21,7 @@ Install
 
 .. code:: bash
 
-   pip install {{cookiecutter.pypi_project_name}}
+   pip install {{cookiecutter.pypi_name}}
 
 
 Documentation

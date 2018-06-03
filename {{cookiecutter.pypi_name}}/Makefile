@@ -7,8 +7,8 @@
 default: dependencies tests docs
 
 dependencies:
-	pip install -U pip --no-cache-dir
-	pip install -R development.txt
+	pip install -q -U pip --no-cache-dir
+	pip install -q -r development.txt
 
 develop:
 	python setup.py develop

@@ -53,7 +53,7 @@ setup.cfg
 requirements.txt
 ----------------
 
-Declares the runtime dependencies of the python package ``{{cookiecutter.pypi_project_name}}``
+Declares the runtime dependencies of the python package ``{{cookiecutter.pypi_name}}``
 
 development.txt
 ---------------
@@ -91,7 +91,7 @@ Alias for the targets :ref:`make dependencies`, :ref:`make tests` and :ref:`make
 Builds your python package and makes is available in the `PYTHONPATH
 <https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH>`_.
 Under the hood it runs ``python setup.py develop`` which is similar to
-running ``pip install {{cookiecutter.pypi_project_name}}`` except that
+running ``pip install {{cookiecutter.pypi_name}}`` except that
 you can modify your code locally and the changes will be available
 immediately.
 
@@ -189,3 +189,4 @@ The script will interactively ask what should be the next version number, then w
 Configures `Travis CI <https://travis-ci.org>`_ to run the tests.
 
 For more information check the Travis documentation on how to `build python projects <https://docs.travis-ci.com/user/languages/python/>`_ and configure a test matrix to `test your project against multiple python versions <https://docs.travis-ci.com/user/customizing-the-build#Explicitly-Including-Jobs>`_.
+Bonus: setup `continuous delivery to pypi <https://docs.travis-ci.com/user/deployment/pypi/>`_

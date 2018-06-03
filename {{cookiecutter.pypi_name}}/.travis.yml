@@ -29,13 +29,14 @@ install:
 # command to run tests
 script: nosetests tests/unit tests/functional
 
-# automated pypi releases
-deploy:
-  provider: pypi
-  user: {{cookiecutter.github_username}}
-  password:
-    secure: {{cookiecutter.travis_password}}
-  on:
-    branch: master
-    tags: true
-  distributions: sdist bdist_wheel
+# # uncomment the lines below to enable automated pypi releases (continuous delivery)
+# # Learn more here: https://docs.travis-ci.com/user/encryption-keys/
+# deploy:
+#   provider: pypi
+#   user: {{cookiecutter.github_username}}
+#   password:
+#     secure: your-encrypted-travis-password
+#   on:
+#     branch: master
+#     tags: true
+#   distributions: sdist bdist_wheel

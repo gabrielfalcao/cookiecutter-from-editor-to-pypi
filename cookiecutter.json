@@ -1,15 +1,15 @@
 {
+  "python_binary": "python3.6",
   "full_name": "Gabriel Falcão",
   "email": "gabriel@nacaolivre.org",
   "github_username": "gabrielfalcao",
-  "project_name": "{{ cookiecutter.full_name }}'s HTTPBin Client",
-  "project_name_pascal_case": "{{ cookiecutter.full_name|capitalize }}HTTPBinClient",
-  "pypi_project_name": "{{ cookiecutter.github_username }}-httpbin",
-  "travis_password": "replace this with ``travis-encrypt {{ cookiecutter.pypi_project_name }}``",
+  "project_name": "{{ cookiecutter.full_name }} HTTPBin Client",
+  "project_name_pascal_case": "{{ cookiecutter.github_username|capitalize }}HTTPBinClient",
+  "pypi_name": "{{ cookiecutter.github_username }}-httpbin",
   "module_name": "{{ cookiecutter.github_username }}_httpbin",
   "copyright_year": "2018",
   "license_name": "MIT",
-  "project_short_description": "{{ cookiecutter.full_name }}'s python client to httpbin.org, open sourced under the {{ license_name }} license",
+  "project_short_description": "{{ cookiecutter.full_name }}'s python client to httpbin.org, open sourced under the {{ cookiecutter.license_name }} license",
   "initial_version": "0.0.1",
-  "readthedocs_url": "https://{{cookiecutter.pypi_project_name}}.readthedocs.org"
+  "readthedocs_url": "https://{{cookiecutter.pypi_name}}.readthedocs.org"
 }

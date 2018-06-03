@@ -60,7 +60,7 @@ setup(
     test_suite='nose.collector',
     version=read_version(),
     entry_points={
-        'console_scripts': ['{{cookiecutter.module_name}} = {{cookiecutter.module_name}}.console:entrypoint'],
+        'console_scripts': ['{{cookiecutter.pypi_name}} = {{cookiecutter.module_name}}.console:entrypoint'],
     },
     package_data={
         '{{cookiecutter.module_name}}': ' '.join([
@@ -81,6 +81,7 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation',
         'Programming Language :: Python :: Implementation :: CPython',
     ],
