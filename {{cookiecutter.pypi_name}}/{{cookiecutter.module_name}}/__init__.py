@@ -7,3 +7,9 @@
 
 {{cookiecutter.project_short_description}}
 """
+from {{cookiecutter.module_name}}.client import HttpBinClient
+
+
+__all__ = (
+    'HttpBinClient',
+)

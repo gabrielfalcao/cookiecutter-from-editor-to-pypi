@@ -1,4 +1,5 @@
 /__virtualenv__/
+/cookiecutter.*.log
 
 *.py[cod]
 

@@ -49,5 +49,7 @@ echo -e "\033[0m"
 echo -e "cd {{cookiecutter.pypi_name}}"
 echo -e "source ${activate_path}"
 echo -e "make"
+echo
 
-rm -f "${stdout_log}" "${stderr_log}"
+# rm -f "${stdout_log}" "${stderr_log}"
+# make || echo -e "\ncd {{cookiecutter.pypi_name}}\n"

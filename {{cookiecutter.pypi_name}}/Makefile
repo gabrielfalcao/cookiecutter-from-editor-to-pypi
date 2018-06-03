@@ -16,7 +16,7 @@ develop:
 tests: unit functional
 
 unit:
-	nosetests tests/unit
+	nosetests tests/unit --cover-erase # let's clear the test coverage report during unit tests only
 
 functional:
 	nosetests tests/functional
